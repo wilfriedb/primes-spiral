@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public class CoordinateGenerator
+    public class CoordinatesGenerator
     {
-        public CoordinateGenerator(int number)
+        public CoordinatesGenerator(int number)
         {
             NumberOfRotations = number;
         }

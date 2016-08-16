@@ -40,7 +40,7 @@ namespace UnitTests
                 Tuple.Create(24,2,2),
                 Tuple.Create(25,3,2)
             };
-            var generator = new CoordinateGenerator(3);
+            var generator = new CoordinatesGenerator(3);
 
             // Act
             var enumerator = generator.GetCoordinates().GetEnumerator();

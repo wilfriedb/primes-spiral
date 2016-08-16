@@ -28,17 +28,21 @@ namespace WpfApp
             SpiraalImage.Source = bm;
         }
 
+        
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            var generator = new CoordinateGenerator(60);
+            var priem = new Xennan.Math.Primes(1000000);
+            var generator = new CoordinatesGenerator(130);
             var bm = (WriteableBitmap)SpiraalImage.Source;
             byte[] colorData = { 255, 255, 255, 255 };
             int stride = bm.PixelWidth * bm.Format.BitsPerPixel / 8;
             foreach (var item in generator.GetCoordinates())
             {
                 var rect = new Int32Rect(item.Item2+160, item.Item3+160, 1, 1);
-                bm.WritePixels(rect, colorData, stride, 0);
-            }
+                if (item.Item1> 1 && priem.IsPrime(item.Item1))
+                {
+                    bm.WritePixels(rect, colorData, stride, 0);
+                }            }
         }
     }
 }

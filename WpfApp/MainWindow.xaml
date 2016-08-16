@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="380" Width="525">
+        Title="MainWindow" Height="550" Width="525">
     <Grid>
         <StackPanel>
-            <Image x:Name="SpiraalImage" Width="320" Height="320"></Image>
+            <Image x:Name="SpiraalImage" Width="500" Height="500"></Image>
             <Button x:Name="StartButton" Width="80" Click="StartButton_Click">Start</Button>
         </StackPanel>
     </Grid>
